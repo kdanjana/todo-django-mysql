@@ -24,7 +24,7 @@ services:
     image: mysql
     container_name: dbc
     volumes:
-      - todo-db-data:/var/lib/mysql/data
+      - todo-db-data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=devdb
