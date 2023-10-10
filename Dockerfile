@@ -4,7 +4,9 @@ ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./todoapp /app
+COPY ./run.sh /app/run.sh
 WORKDIR /app
+RUN chmod +x run.sh
 EXPOSE 8000
 
 # need it for mysqlclient installation
@@ -18,6 +20,4 @@ RUN python -m venv /py && \
 
 ENV PATH="/py/bin:$PATH"
 
-#RUN python manage.py makemigrations && \
-#        python manage.py migrate
-#CMD ["python","manage.py","runserver","0.0.0.0:8000"]
+
