@@ -10,7 +10,7 @@ services:
     volumes:
       - ./todoapp:/app
     command: >
-      sh -c "/scripts/run.sh"
+      bash -c "/scripts/run.sh"
     environment:
       - DB_HOST=db
       - DB_NAME=devdb
