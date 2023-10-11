@@ -16,7 +16,6 @@ class TaskForm(forms.ModelForm):
 
  
     def clean(self):
-        print("1111")
         super(TaskForm, self).clean()
         title = self.cleaned_data.get('title')
         if len(title) < 3:
